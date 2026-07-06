@@ -4,9 +4,7 @@
 
 ## 例の概要
 
-講義資料では、フォトダイオード、デジタルカメラ、2 つのユニットの統合、ノイズを加えた場合の排他性、RNN と feedforward network の比較が扱われていました。
-
-このプログラムでは、それらとは異なる例として、3 つの二値ユニットの次状態が次のパリティ規則を満たす場合を考えます。
+このプログラムでは IIT の例として、3 つの二値ユニットの次状態が次のパリティ規則を満たす場合を考えます。
 
 ```text
 C = A xor B
@@ -32,7 +30,7 @@ phi = D_KL(whole effect repertoire || partitioned effect repertoire)
 
 ## 実行方法
 
-以下のコマンドを `homework3/` フォルダ内で実行します。
+以下のコマンドを `homework3/` をカレントディレクトリとした状態で実行します。
 
 ```bash
 conda env create -f environment.yml
@@ -41,13 +39,6 @@ conda activate iit-homework3
 ```
 
 実行すると、プロット画面が表示され、同時に `iit_parity_example.png` が保存されます。
-
-もし実行権限のエラーが出た場合は、次のように実行権限を付けてからもう一度実行します。
-
-```bash
-chmod +x iit_parity_example.py
-./iit_parity_example.py
-```
 
 ## 結果の見方
 
@@ -60,3 +51,4 @@ chmod +x iit_parity_example.py
 ```text
 phi = 1.00 bit
 ```
+
