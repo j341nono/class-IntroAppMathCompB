@@ -1,62 +1,61 @@
-# Homework 3: IIT Parity Example
+# Homework 3: IIT のパリティ例
 
-This folder contains a small executable Python program for the report assignment on Integrated Information Theory (IIT).
+このフォルダには、Integrated Information Theory（IIT）の課題用に作成した、実行可能な Python プログラムを置いています。
 
-## Idea
+## 例の概要
 
-The lecture notes introduced photodiodes, digital cameras, a two-unit integrated pair, exclusion with an added noisy unit, and recurrent/feedforward networks.  This program uses a different toy example: three binary units whose next state must satisfy a parity rule
+講義資料では、フォトダイオード、デジタルカメラ、2 つのユニットの統合、ノイズを加えた場合の排他性、RNN と feedforward network の比較が扱われていました。
+
+このプログラムでは、それらとは異なる例として、3 つの二値ユニットの次状態が次のパリティ規則を満たす場合を考えます。
 
 ```text
 C = A xor B
 ```
 
-The interesting point is that each single unit still looks like a fair coin.  Even each pair of units looks unconstrained.  However, the whole three-unit system rules out half of the possible future states.  In a simplified IIT-style calculation, cutting the system destroys this whole-system relation.
+この例の面白い点は、1 つずつのユニットを見るとそれぞれ公平なコインのように見えることです。さらに、2 つのユニットの組だけを見ても強い制約は見えません。しかし、3 つ全体を見ると、可能な未来状態の半分が禁止されています。
 
-The script computes
+つまり、部分だけでは見えない関係が、全体としては存在しています。簡略化した IIT 的な計算では、システムを分割するとこの全体的な関係が失われます。
+
+スクリプトでは、次の量をいくつかの分割について計算し、図として表示します。
 
 ```text
 phi = D_KL(whole effect repertoire || partitioned effect repertoire)
 ```
 
-for several partitions and plots the result.
-
 ![IIT parity example plot](iit_parity_example.png)
 
-## Files
+## ファイル
 
-- `environment.yml`: Conda environment for running the program.
-- `iit_parity_example.py`: Executable Python script that creates the plot.
-- `iit_parity_example.png`: Generated after running the script.
+- `environment.yml`: プログラムを実行するための Conda 環境ファイルです。
+- `iit_parity_example.py`: プロットを作成する実行可能な Python スクリプトです。
+- `iit_parity_example.png`: スクリプトを実行すると生成される図です。
 
-## How to Run
+## 実行方法
 
-Create and activate the environment:
+以下のコマンドを `homework3/` フォルダ内で実行します。
 
 ```bash
 conda env create -f environment.yml
 conda activate iit-homework3
-```
-
-Run the program:
-
-```bash
 ./iit_parity_example.py
 ```
 
-If the executable bit is lost after downloading, run:
+実行すると、プロット画面が表示され、同時に `iit_parity_example.png` が保存されます。
+
+もし実行権限のエラーが出た場合は、次のように実行権限を付けてからもう一度実行します。
 
 ```bash
 chmod +x iit_parity_example.py
 ./iit_parity_example.py
 ```
 
-The program saves the figure as `iit_parity_example.png` and also opens the plot window.
+## 結果の見方
 
-## Result
+オレンジ色の棒は、システムを分割した後の分布を表しています。この場合、8 つの未来状態がすべて同じ確率になります。
 
-The orange bars show what the distribution looks like after a partition cut: all eight future states are equally likely.  The green bars show the whole-system repertoire: only the four states satisfying the XOR parity relation are possible.
+緑色の棒は、全体として見たときの effect repertoire を表しています。こちらでは、XOR のパリティ関係を満たす 4 つの状態だけが可能です。
 
-Because the partitioned system cannot represent the parity relation, the KL divergence is positive.  In this toy model the minimum partition still loses `1.00 bit` of information, so the simplified integrated information is
+分割されたシステムではパリティ関係を表せないため、KL divergence は正の値になります。この toy model では、最小の分割でも `1.00 bit` の情報が失われるので、簡略化した統合情報は次のようになります。
 
 ```text
 phi = 1.00 bit
