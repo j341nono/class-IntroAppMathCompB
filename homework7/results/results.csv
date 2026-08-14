@@ -1,0 +1,19 @@
+experiment,series,gamma,immediate_gain,hpi,deltas
+Immediate Gain vs HPI,Specific Patch,0.90,0.200000,0.051461,0.200;0.050;0.000;-0.020;-0.030
+Immediate Gain vs HPI,General Rule,0.90,0.100000,0.085479,0.100;0.090;0.080;0.080;0.070
+Immediate Gain vs HPI,Harmful Rule,0.90,-0.020000,-0.036301,-0.020;-0.030;-0.040;-0.050;-0.050
+Persistence,Fast decay,0.90,0.100000,0.021064,0.10000;0.02500;0.00625;0.00156;0.00039;0.00010;0.00002;0.00001;0.00000
+Persistence,Medium decay,0.90,0.100000,0.035349,0.10000;0.06000;0.03600;0.02160;0.01296;0.00778;0.00467;0.00280;0.00168
+Persistence,Slow decay,0.90,0.100000,0.073022,0.10000;0.09000;0.08100;0.07290;0.06561;0.05905;0.05314;0.04783;0.04305
+Gamma Sensitivity,Specific Patch,0.50,0.200000,0.113871,0.200;0.050;0.000;-0.020;-0.030
+Gamma Sensitivity,Specific Patch,0.70,0.200000,0.079671,0.200;0.050;0.000;-0.020;-0.030
+Gamma Sensitivity,Specific Patch,0.90,0.200000,0.051461,0.200;0.050;0.000;-0.020;-0.030
+Gamma Sensitivity,Specific Patch,1.00,0.200000,0.040000,0.200;0.050;0.000;-0.020;-0.030
+Gamma Sensitivity,General Rule,0.50,0.100000,0.092581,0.100;0.090;0.080;0.080;0.070
+Gamma Sensitivity,General Rule,0.70,0.100000,0.088871,0.100;0.090;0.080;0.080;0.070
+Gamma Sensitivity,General Rule,0.90,0.100000,0.085479,0.100;0.090;0.080;0.080;0.070
+Gamma Sensitivity,General Rule,1.00,0.100000,0.084000,0.100;0.090;0.080;0.080;0.070
+Gamma Sensitivity,Harmful Rule,0.50,-0.020000,-0.028065,-0.020;-0.030;-0.040;-0.050;-0.050
+Gamma Sensitivity,Harmful Rule,0.70,-0.020000,-0.032366,-0.020;-0.030;-0.040;-0.050;-0.050
+Gamma Sensitivity,Harmful Rule,0.90,-0.020000,-0.036301,-0.020;-0.030;-0.040;-0.050;-0.050
+Gamma Sensitivity,Harmful Rule,1.00,-0.020000,-0.038000,-0.020;-0.030;-0.040;-0.050;-0.050
