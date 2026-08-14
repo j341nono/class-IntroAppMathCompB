@@ -193,12 +193,16 @@ Harmful Rule:   [-0.02, -0.03, -0.04, -0.05, -0.05]
 * General Ruleは、修正直後の改善は比較的小さいが、その後のプロンプトにも有益な影響を残す修正を表す。
 * Harmful Ruleは、その後の探索を継続的に悪化させる修正を表す。
 
-![世代ごとの性能差](figures/generation_effect.png)
+<p align="center">
+  <img src="figures/generation_effect.png" alt="世代ごとの性能差" width="720">
+</p>
 Specific Patchは修正直後に大きな改善を示すが、その効果は世代が進むにつれて急速に減少する。
 一方、General Ruleは初期改善は小さいものの、その後の世代でも安定して正の効果を維持している。
 Harmful Ruleはすべての世代で負の効果を示している。
 
-![即時改善とHPIの比較](figures/immediate_vs_hpi.png)
+<p align="center">
+  <img src="figures/immediate_vs_hpi.png" alt="即時改善とHPIの比較" width="720">
+</p>
 Immediate GainではSpecific Patchが最も高く評価されるが、HPIではGeneral Ruleが最も高く評価される。
 これは、HPIが修正直後の性能だけでなく、その効果が後続世代へどれだけ継承されるかを評価しているためである。
 
@@ -220,7 +224,9 @@ Slow decayでは $\rho=0.90$ とする。
 
 すべて同じ初期性能改善から開始するため、HPIの違いは主に効果の持続性によって生じる。
 
-![Persistenceによる違い](figures/persistence_effect.png)
+<p align="center">
+  <img src="figures/persistence_effect.png" alt="Persistenceによる違い" width="720">
+</p>
 すべての系列は同じ初期改善から始まるが、効果が長く持続する系列ほどHPIが大きくなる。
 この結果は、HPIが単なる初期性能ではなく、改善の持続性を反映することを示している。
 
@@ -231,7 +237,9 @@ $\gamma$ が小さい場合は修正直後の性能改善が強く評価され�
 
 $\gamma$ が大きい場合は、将来世代に残る効果がより強く評価される。
 
-![gammaの感度分析](figures/gamma_sensitivity.png)
+<p align="center">
+  <img src="figures/gamma_sensitivity.png" alt="gammaの感度分析" width="720">
+</p>
 $\gamma$ が小さい場合は修正直後の改善が重視されるため、Specific PatchのHPIが高くなる。
 一方、$\gamma$ を大きくすると将来世代の効果が重視され、General Ruleがより高く評価される。
 
