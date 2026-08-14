@@ -28,7 +28,6 @@
 
 この授業の最終レポートは [`homework7/`](homework7/) にあります。
 
-最終レポートでは、自動プロンプト最適化のための独自の情報量
-**Heritable Prompt Information（HPI）**を提案し、Pythonによる再現可能な実験を行っています。
+最終レポートでは、自動プロンプト最適化のための独自の情報量 Heritable Prompt Information (HPI) を提案し、Pythonによる再現可能な実験を行っています。
 詳細な説明、数式、実行方法、実験結果および図は
 [`homework7/README.md`](homework7/README.md) を参照してください。
